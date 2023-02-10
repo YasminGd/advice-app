@@ -11,7 +11,7 @@ function App() {
     onRandomizeAdvice()
   }, [])
 
-  const spinnigClass = useMemo(() => {
+  const spinningClass = useMemo(() => {
     return isLoading ? "loading" : ""
   }, [isLoading])
 
@@ -34,7 +34,7 @@ function App() {
         <p className='title'>advice #{advice.id}</p>
         <p className='advice'>"{advice.advice}"</p>
         <img src={divider} alt='' className='divider' />
-        <div className={`random ${spinnigClass}`} onClick={onRandomizeAdvice}>
+        <div className={`random ${spinningClass}`} onClick={onRandomizeAdvice}>
           <img src={dice} alt='' />
         </div>
       </div>
